@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>TEST 19 JANUARI</title>
+  </head>
+  <body>
+    <h1>TEST 19 JANUARI</h1>
+    <div>
+      <div class="outer">
+        <div class="top">
+          <div class="inner1"></div>
+          <div class="inner2"></div>
+        </div>
+        <div class="output">
+          <output class="output-number" id="output" for="angka">0</output>
+        </div>
+        <div class="bottom">
+          <div class="inner3"></div>
+          <div class="inner4"></div>
+        </div>
+      </div>
+
+      <div>
+        <button class="incremetbutton" id="increment">INCREMENT</button>
+        <button class="decrementbutton" id="decrement">DECREMENT</button>
+      </div>
+      <div class="reset">
+        <button class="resetbutton" id="reset">RESET</button>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("increment")
+        .addEventListener("click", function () {
+          var outputValue = parseInt(
+            document.getElementById("output").textContent
+          );
+          var newValue = outputValue + 1;
+          document.getElementById("output").textContent = newValue;
+        });
+
+      document
+        .getElementById("decrement")
+        .addEventListener("click", function () {
+          var outputValue = parseInt(
+            document.getElementById("output").textContent
+          );
+          var newValue = outputValue - 1;
+          document.getElementById("output").textContent = newValue;
+        });
+      document.getElementById("reset").addEventListener("click", function () {
+        var outputValue = parseInt(
+          document.getElementById("output").textContent
+        );
+        var newValue = 0;
+        document.getElementById("output").textContent = newValue;
+      });
+    </script>
+  </body>
+</html>
